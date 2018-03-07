@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052E54E9204F6E9900C57248 /* FollowersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54E8204F6E9900C57248 /* FollowersModel.swift */; };
+		052E54EC204F8A7F00C57248 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54EB204F8A7F00C57248 /* Utils.swift */; };
+		052E54EE204F8A8E00C57248 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54ED204F8A8E00C57248 /* Extensions.swift */; };
+		052E54F1204F90CB00C57248 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54F0204F90CB00C57248 /* CoreDataHelper.swift */; };
 		057CD881204DDC41005E12BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057CD880204DDC41005E12BB /* AppDelegate.swift */; };
 		057CD883204DDC41005E12BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057CD882204DDC41005E12BB /* LoginViewController.swift */; };
 		057CD886204DDC41005E12BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057CD884204DDC41005E12BB /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052E54E8204F6E9900C57248 /* FollowersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersModel.swift; sourceTree = "<group>"; };
+		052E54EB204F8A7F00C57248 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		052E54ED204F8A8E00C57248 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		052E54F0204F90CB00C57248 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		057CD87D204DDC41005E12BB /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057CD880204DDC41005E12BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057CD882204DDC41005E12BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052E54EA204F8A0000C57248 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				052E54EB204F8A7F00C57248 /* Utils.swift */,
+				052E54ED204F8A8E00C57248 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		052E54EF204F90B000C57248 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				052E54F0204F90CB00C57248 /* CoreDataHelper.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		057CD874204DDC41005E12BB = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +91,8 @@
 		057CD87F204DDC41005E12BB /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				052E54EF204F90B000C57248 /* Core Data */,
+				052E54EA204F8A0000C57248 /* Utils */,
 				057CD897204DDF10005E12BB /* Other */,
 				057CD896204DDF00005E12BB /* Controllers */,
 				057CD895204DDEF8005E12BB /* Models */,
@@ -79,6 +106,7 @@
 		057CD895204DDEF8005E12BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				052E54E8204F6E9900C57248 /* FollowersModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,8 +274,12 @@
 			files = (
 				057CD8A0204DF78F005E12BB /* FollowersViewController.swift in Sources */,
 				057CD889204DDC41005E12BB /* TwitterClient.xcdatamodeld in Sources */,
+				052E54F1204F90CB00C57248 /* CoreDataHelper.swift in Sources */,
 				057CD883204DDC41005E12BB /* LoginViewController.swift in Sources */,
 				057CD881204DDC41005E12BB /* AppDelegate.swift in Sources */,
+				052E54E9204F6E9900C57248 /* FollowersModel.swift in Sources */,
+				052E54EC204F8A7F00C57248 /* Utils.swift in Sources */,
+				052E54EE204F8A8E00C57248 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
