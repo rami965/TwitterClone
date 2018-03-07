@@ -88,4 +88,25 @@ class CoreDataHelper: NSObject {
         
         return result
     }
+    
+    
+    /**
+     Clears all records of an entity.
+     
+     - parameters:
+        - entity: The entity name.
+        - managedObjectContext: The context in which data will be persisted.
+     */
+    func clearRecords(_ entity: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try managedObjectContext.execute(deleteRequest)
+            print("All records deleted successfully.")
+        } catch {
+            print("Unable to delete all records for entity \(entity).")
+        }
+        
+    }
 }

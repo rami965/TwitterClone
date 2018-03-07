@@ -11,6 +11,13 @@
 		052E54EC204F8A7F00C57248 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54EB204F8A7F00C57248 /* Utils.swift */; };
 		052E54EE204F8A8E00C57248 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54ED204F8A8E00C57248 /* Extensions.swift */; };
 		052E54F1204F90CB00C57248 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052E54F0204F90CB00C57248 /* CoreDataHelper.swift */; };
+		0563B31120504703006FACDF /* Constansts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B31020504703006FACDF /* Constansts.swift */; };
+		0563B3142050481F006FACDF /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B3132050481F006FACDF /* BackendManager.swift */; };
+		0563B31A20506727006FACDF /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B31620506727006FACDF /* Client.swift */; };
+		0563B31B20506727006FACDF /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B31820506727006FACDF /* TwitterAPI.swift */; };
+		0563B31C20506727006FACDF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B31920506727006FACDF /* Request.swift */; };
+		0563B321205097A7006FACDF /* FollowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B320205097A7006FACDF /* FollowersTableViewCell.swift */; };
+		0563B3232050982B006FACDF /* FollowersTableViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563B3222050982B006FACDF /* FollowersTableViewDelegateDataSource.swift */; };
 		057CD881204DDC41005E12BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057CD880204DDC41005E12BB /* AppDelegate.swift */; };
 		057CD883204DDC41005E12BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057CD882204DDC41005E12BB /* LoginViewController.swift */; };
 		057CD886204DDC41005E12BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057CD884204DDC41005E12BB /* Main.storyboard */; };
@@ -26,6 +33,14 @@
 		052E54EB204F8A7F00C57248 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		052E54ED204F8A8E00C57248 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		052E54F0204F90CB00C57248 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		0563B31020504703006FACDF /* Constansts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constansts.swift; sourceTree = "<group>"; };
+		0563B3132050481F006FACDF /* BackendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
+		0563B31620506727006FACDF /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = "../../../TwitterAPI-master/TwitterAPI/Client.swift"; sourceTree = "<group>"; };
+		0563B31720506727006FACDF /* TwitterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterAPI.h; path = "../../../TwitterAPI-master/TwitterAPI/TwitterAPI.h"; sourceTree = "<group>"; };
+		0563B31820506727006FACDF /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterAPI.swift; path = "../../../TwitterAPI-master/TwitterAPI/TwitterAPI.swift"; sourceTree = "<group>"; };
+		0563B31920506727006FACDF /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "../../../TwitterAPI-master/TwitterAPI/Request.swift"; sourceTree = "<group>"; };
+		0563B320205097A7006FACDF /* FollowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersTableViewCell.swift; sourceTree = "<group>"; };
+		0563B3222050982B006FACDF /* FollowersTableViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersTableViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		057CD87D204DDC41005E12BB /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057CD880204DDC41005E12BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057CD882204DDC41005E12BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +73,7 @@
 			children = (
 				052E54EB204F8A7F00C57248 /* Utils.swift */,
 				052E54ED204F8A8E00C57248 /* Extensions.swift */,
+				0563B31020504703006FACDF /* Constansts.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -68,6 +84,50 @@
 				052E54F0204F90CB00C57248 /* CoreDataHelper.swift */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		0563B312205047FC006FACDF /* BackEnd Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0563B3132050481F006FACDF /* BackendManager.swift */,
+			);
+			path = "BackEnd Manager";
+			sourceTree = "<group>";
+		};
+		0563B31520506704006FACDF /* Twitter API Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0563B31620506727006FACDF /* Client.swift */,
+				0563B31920506727006FACDF /* Request.swift */,
+				0563B31720506727006FACDF /* TwitterAPI.h */,
+				0563B31820506727006FACDF /* TwitterAPI.swift */,
+			);
+			path = "Twitter API Helper";
+			sourceTree = "<group>";
+		};
+		0563B31D20509778006FACDF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				057CD882204DDC41005E12BB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0563B31E2050977E006FACDF /* Followers */ = {
+			isa = PBXGroup;
+			children = (
+				057CD89F204DF78F005E12BB /* FollowersViewController.swift */,
+				0563B320205097A7006FACDF /* FollowersTableViewCell.swift */,
+				0563B3222050982B006FACDF /* FollowersTableViewDelegateDataSource.swift */,
+			);
+			name = Followers;
+			sourceTree = "<group>";
+		};
+		0563B31F2050978B006FACDF /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		057CD874204DDC41005E12BB = {
@@ -91,6 +151,8 @@
 		057CD87F204DDC41005E12BB /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				0563B31520506704006FACDF /* Twitter API Helper */,
+				0563B312205047FC006FACDF /* BackEnd Manager */,
 				052E54EF204F90B000C57248 /* Core Data */,
 				052E54EA204F8A0000C57248 /* Utils */,
 				057CD897204DDF10005E12BB /* Other */,
@@ -114,8 +176,9 @@
 		057CD896204DDF00005E12BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				057CD882204DDC41005E12BB /* LoginViewController.swift */,
-				057CD89F204DF78F005E12BB /* FollowersViewController.swift */,
+				0563B31F2050978B006FACDF /* Details */,
+				0563B31E2050977E006FACDF /* Followers */,
+				0563B31D20509778006FACDF /* Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,11 +336,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				057CD8A0204DF78F005E12BB /* FollowersViewController.swift in Sources */,
+				0563B31C20506727006FACDF /* Request.swift in Sources */,
+				0563B3232050982B006FACDF /* FollowersTableViewDelegateDataSource.swift in Sources */,
 				057CD889204DDC41005E12BB /* TwitterClient.xcdatamodeld in Sources */,
 				052E54F1204F90CB00C57248 /* CoreDataHelper.swift in Sources */,
 				057CD883204DDC41005E12BB /* LoginViewController.swift in Sources */,
+				0563B31B20506727006FACDF /* TwitterAPI.swift in Sources */,
+				0563B31A20506727006FACDF /* Client.swift in Sources */,
 				057CD881204DDC41005E12BB /* AppDelegate.swift in Sources */,
+				0563B31120504703006FACDF /* Constansts.swift in Sources */,
+				0563B3142050481F006FACDF /* BackendManager.swift in Sources */,
 				052E54E9204F6E9900C57248 /* FollowersModel.swift in Sources */,
+				0563B321205097A7006FACDF /* FollowersTableViewCell.swift in Sources */,
 				052E54EC204F8A7F00C57248 /* Utils.swift in Sources */,
 				052E54EE204F8A8E00C57248 /* Extensions.swift in Sources */,
 			);

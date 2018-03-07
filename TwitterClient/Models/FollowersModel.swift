@@ -81,6 +81,13 @@ class Follower: Mappable {
         
     }
     
+    init(_ name: String?, _ handle: String?, _ bio: String?, _ imageUrl: String?) {
+        self.name = name
+        self.screen_name = handle
+        self.description = bio
+        self.profile_image_url = imageUrl
+    }
+    
     func mapping(map: Map) {
         id                                      <- map["id"]
         id_str                                  <- map["id_str"]
@@ -143,6 +150,4 @@ class APIError: Mappable {
         message                 <- map["message"]
     }
 }
-
-
 

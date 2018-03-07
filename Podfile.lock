@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - MutableDataScanner (1.1.0)
+  - OAuthSwift (1.2.0)
+  - ObjectMapper (3.1.0)
+  - SwiftSpinner (1.5.0)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - MutableDataScanner
+  - OAuthSwift
+  - SwiftSpinner
+  - TwitterKit
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  MutableDataScanner: 07330dfa3b4ec383f342e25d2b1e8697f85a3894
+  OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
+
+PODFILE CHECKSUM: 3be0183b4aa2685dcbd41c1f4d71b2f72cc1c680
+
+COCOAPODS: 1.2.1
