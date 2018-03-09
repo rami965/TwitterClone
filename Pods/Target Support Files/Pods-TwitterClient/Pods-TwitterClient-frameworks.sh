@@ -92,10 +92,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireObjectMapper/AlamofireObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DGElasticPullToRefresh/DGElasticPullToRefresh.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DropDown/DropDown.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MutableDataScanner/MutableDataScanner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OAuthSwift/OAuthSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftSpinner/SwiftSpinner.framework"
   install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
   install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
 fi
@@ -103,10 +103,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireObjectMapper/AlamofireObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DGElasticPullToRefresh/DGElasticPullToRefresh.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DropDown/DropDown.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MutableDataScanner/MutableDataScanner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OAuthSwift/OAuthSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftSpinner/SwiftSpinner.framework"
   install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
   install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
 fi

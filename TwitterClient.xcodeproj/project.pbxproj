@@ -30,6 +30,7 @@
 		0595330E2051CAC30046D19A /* TweetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595330D2051CAC30046D19A /* TweetsModel.swift */; };
 		059533102051CBD50046D19A /* TweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595330F2051CBD50046D19A /* TweetsTableViewCell.swift */; };
 		059533122051CBE80046D19A /* TweetsTableViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059533112051CBE80046D19A /* TweetsTableViewDelegateDataSource.swift */; };
+		059FF6922052D92300ED4C36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059FF6942052D92300ED4C36 /* Localizable.strings */; };
 		ABEC0E3E12A64BE0DA9C1F63 /* Pods_TwitterClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0266865F9BB66BBCFB55C /* Pods_TwitterClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,10 @@
 		0595330D2051CAC30046D19A /* TweetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsModel.swift; sourceTree = "<group>"; };
 		0595330F2051CBD50046D19A /* TweetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsTableViewCell.swift; sourceTree = "<group>"; };
 		059533112051CBE80046D19A /* TweetsTableViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsTableViewDelegateDataSource.swift; sourceTree = "<group>"; };
+		059FF68E2052D86F00ED4C36 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		059FF68F2052D87000ED4C36 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		059FF6932052D92300ED4C36 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		059FF6952052D95500ED4C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32950ECD5CFBA0BED7154859 /* Pods-TwitterClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClient/Pods-TwitterClient.release.xcconfig"; sourceTree = "<group>"; };
 		DD7961909158FEE841660B34 /* Pods-TwitterClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClient/Pods-TwitterClient.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F0266865F9BB66BBCFB55C /* Pods_TwitterClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,11 +170,11 @@
 		057CD87F204DDC41005E12BB /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				057CD897204DDF10005E12BB /* Other */,
 				0563B31520506704006FACDF /* Twitter API Helper */,
 				0563B312205047FC006FACDF /* BackEnd Manager */,
 				052E54EF204F90B000C57248 /* Core Data */,
 				052E54EA204F8A0000C57248 /* Utils */,
-				057CD897204DDF10005E12BB /* Other */,
 				057CD896204DDF00005E12BB /* Controllers */,
 				057CD895204DDEF8005E12BB /* Models */,
 				057CD88F204DDC41005E12BB /* Info.plist */,
@@ -205,6 +210,7 @@
 				057CD884204DDC41005E12BB /* Main.storyboard */,
 				057CD88C204DDC41005E12BB /* LaunchScreen.storyboard */,
 				057CD898204DE0F0005E12BB /* TwitterClient-Bridging-Header.h */,
+				059FF6942052D92300ED4C36 /* Localizable.strings */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				057CD88E204DDC41005E12BB /* LaunchScreen.storyboard in Resources */,
+				059FF6922052D92300ED4C36 /* Localizable.strings in Resources */,
 				057CD88B204DDC41005E12BB /* Assets.xcassets in Resources */,
 				057CD886204DDC41005E12BB /* Main.storyboard in Resources */,
 			);
@@ -380,6 +387,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				057CD885204DDC41005E12BB /* Base */,
+				059FF68E2052D86F00ED4C36 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -388,8 +396,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				057CD88D204DDC41005E12BB /* Base */,
+				059FF68F2052D87000ED4C36 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		059FF6942052D92300ED4C36 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				059FF6932052D92300ED4C36 /* ar */,
+				059FF6952052D95500ED4C36 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -456,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

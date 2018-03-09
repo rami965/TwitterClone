@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TwitterClient/Controllers/Details/FollowerDetailsViewController.swift"
-            timestampString = "542244898.777204"
+            timestampString = "542303946.964238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TwitterClient/Controllers/Details/FollowerDetailsViewController.swift"
-            timestampString = "542244898.777388"
+            timestampString = "542303946.964689"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "fetchTweets()"
             landmarkType = "7">
             <Locations>

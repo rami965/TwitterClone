@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0gz-BD-cDV"; */
+"0gz-BD-cDV.text" = "Label";
+
+/* Class = "UILabel"; text = "full_name"; ObjectID = "2Tg-PH-5aW"; */
+"2Tg-PH-5aW.text" = "full_name";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "3XA-iv-NHy"; */
+"3XA-iv-NHy.text" = "Details";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "4wX-ue-4ee"; */
+"4wX-ue-4ee.text" = "0";
+
+/* Class = "UILabel"; text = "@handle"; ObjectID = "55F-Xc-deO"; */
+"55F-Xc-deO.text" = "@handle";
+
+/* Class = "UILabel"; text = "Friends"; ObjectID = "5F9-BJ-slR"; */
+"5F9-BJ-slR.text" = "Friends";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8Hr-MD-qUU"; */
+"8Hr-MD-qUU.text" = "Label";
+
+/* Class = "UILabel"; text = "@handle"; ObjectID = "8hN-yf-cYH"; */
+"8hN-yf-cYH.text" = "@handle";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CVT-Hw-45v"; */
+"CVT-Hw-45v.text" = "Label";
+
+/* Class = "UILabel"; text = "Bio"; ObjectID = "HlH-BP-sH8"; */
+"HlH-BP-sH8.text" = "Bio";
+
+/* Class = "UILabel"; text = "Tweets"; ObjectID = "Nk2-4d-4Jq"; */
+"Nk2-4d-4Jq.text" = "Tweets";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "ONF-5U-1h3"; */
+"ONF-5U-1h3.text" = "0";
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "lTC-Um-n7L"; */
+"lTC-Um-n7L.text" = "Followers";
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "q9z-VF-muE"; */
+"q9z-VF-muE.text" = "Followers";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "yQB-hw-H0b"; */
+"yQB-hw-H0b.text" = "name";

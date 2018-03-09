@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let _ = UserDefaults.standard.string(forKey: "currentUser") {
+        if let _ = UserDefaults.standard.string(forKey: "currentUserID") {
             //there was logged user
             showFollowers()
         }
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
                 print("Token secret:", session.authTokenSecret)
                 
                 //save current signed in user
-                UserDefaults.standard.set(session.userID, forKey: "currentUser")
+                UserDefaults.standard.set(session.userID, forKey: "currentUserID")
                 
                 //check and update user
                 if let existingUser = self.fetchUser(id: session.userID) {
@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
             }
         })
         
+        logInButton.layer.cornerRadius = 10.0
         logInButton.center = self.view.center
         self.view.addSubview(logInButton)
     }

@@ -11,6 +11,10 @@ import Alamofire
 
 class FollowerDetailsViewController: UIViewController {
     
+    @IBOutlet weak var viewTitle: UILabel!
+    @IBOutlet weak var friendsLabel: UILabel!
+    @IBOutlet weak var followersLabel: UILabel!
+    @IBOutlet weak var tweetsLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var personalImage: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -41,6 +45,9 @@ class FollowerDetailsViewController: UIViewController {
         tweetsTableView.delegate = self
         tweetsTableView.dataSource = self
         
+        //Always shows data from left to right
+        UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        
         //Initailize core data context
         appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedContext = appDelegate.persistentContainer.viewContext
@@ -48,6 +55,9 @@ class FollowerDetailsViewController: UIViewController {
         //To get original image size
         let bgOriginalImageURL = backgroundImageURL?.replacingOccurrences(of: "_normal", with: "")
         let userOriginalImageURL = userImageUrl?.replacingOccurrences(of: "_normal", with: "")
+        
+        //localize current screen
+        localizeCurrentViewController()
         
         //download background image
         downloadBackgroundImage(bgOriginalImageURL, completion: {(image) in
@@ -78,6 +88,19 @@ class FollowerDetailsViewController: UIViewController {
         fetchTweets()
     }
     
+    
+    
+    /**
+     Localizing the viewController.
+     
+     */
+    private func localizeCurrentViewController() {
+        viewTitle.text = NSLocalizedString("details", comment: "")
+        friendsLabel.text = NSLocalizedString("friends", comment: "")
+        followersLabel.text = NSLocalizedString("followers", comment: "")
+        tweetsLabel.text = NSLocalizedString("tweets", comment: "")
+    }
+    
     /**
      Downloading the user background image in background.
      
@@ -103,7 +126,7 @@ class FollowerDetailsViewController: UIViewController {
      
      */
     private func fetchTweets() {
-        guard let userID = UserDefaults.standard.string(forKey: "currentUser"),
+        guard let userID = UserDefaults.standard.string(forKey: "currentUserID"),
             let userData = fetchUser(id: userID),
             let token = userData.value(forKey: "userToken") as? String,
             let tokenSecret = userData.value(forKey: "userTokenSecret") as? String,

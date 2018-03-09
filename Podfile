@@ -8,10 +8,10 @@ target 'TwitterClient' do
   # Pods for TwitterClient
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
-  pod 'SwiftSpinner'
   pod 'TwitterKit'
   pod 'OAuthSwift'
   pod 'MutableDataScanner'
   pod 'DGElasticPullToRefresh'
+  pod 'DropDown'
 
 end
