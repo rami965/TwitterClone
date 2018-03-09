@@ -9,14 +9,94 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TwitterClient/Controllers/FollowersViewController.swift"
-            timestampString = "542152679.456697"
+            filePath = "TwitterClient/Controllers/Details/FollowerDetailsViewController.swift"
+            timestampString = "542244898.777204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClient/Controllers/Details/TweetsTableViewDelegateDataSource.swift"
+            timestampString = "542244898.777288"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClient/BackEnd Manager/BackendManager.swift"
+            timestampString = "542244898.777342"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetchTweetsListFromAPI(_:_:_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClient/Controllers/Details/FollowerDetailsViewController.swift"
+            timestampString = "542244898.777388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "fetchTweets()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClient.FollowerDetailsViewController.(fetchTweets in _7EB2D1D21C606510CFD3BAD55F4E30EB)() -&gt; ()"
+                  moduleName = "TwitterClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macc/Desktop/TwitterClient/TwitterClient/Controllers/Details/FollowerDetailsViewController.swift"
+                  timestampString = "542239471.998813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "4120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;TwitterClient.TweetsResponse&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TwitterClient.FollowerDetailsViewController.(fetchTweets in _7EB2D1D21C606510CFD3BAD55F4E30EB)() -&gt; ()"
+                  moduleName = "TwitterClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macc/Desktop/TwitterClient/TwitterClient/Controllers/Details/FollowerDetailsViewController.swift"
+                  timestampString = "542239472.002274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

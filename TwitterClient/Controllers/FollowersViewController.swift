@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireObjectMapper
+import DGElasticPullToRefresh
 
 class FollowersViewController: UIViewController {
 
@@ -29,6 +30,11 @@ class FollowersViewController: UIViewController {
         //Initailize core data context
         appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedContext = appDelegate.persistentContainer.viewContext
+        
+        
+        // Initialize tableView with refresh indicator
+        initializeRefreshIndicator()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,17 +48,46 @@ class FollowersViewController: UIViewController {
             //there is saved list
             followersList = list
             followersTableView.reloadData()
-            fetchOnlineFollowersList()
+            if let userID = UserDefaults.standard.string(forKey: "currentUser"){
+                fetchOnlineFollowersList(userID)
+            }
             
         } else {
             //no saved list
-            fetchOnlineFollowersList()
+            Indicator().showActivityIndicator(uiView: self.view)
+            if let userID = UserDefaults.standard.string(forKey: "currentUser"){
+                fetchOnlineFollowersList(userID)
+            }
         }
     }
     
-    private func fetchOnlineFollowersList() {
-        guard let userID = UserDefaults.standard.string(forKey: "currentUser"),
-            let userData = fetchUser(id: userID),
+    /**
+     Initializing the refresh indicator.
+     
+     */
+    private func initializeRefreshIndicator() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor.white
+        followersTableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            guard let userID = UserDefaults.standard.string(forKey: "currentUser") else {
+                self?.followersTableView.dg_stopLoading()
+                return
+            }
+            
+            self?.fetchOnlineFollowersList(userID)
+            }, loadingView: loadingView)
+        followersTableView.dg_setPullToRefreshFillColor(UIColor.darkGray)
+        followersTableView.dg_setPullToRefreshBackgroundColor(followersTableView.backgroundColor!)
+    }
+    
+    /**
+     Fetches followers list for specefic user.
+     
+     - parameters:
+        - userID: The user ID used to get his followers.
+     */
+    private func fetchOnlineFollowersList(_ userID: String) {
+        guard let userData = fetchUser(id: userID),
             let token = userData.value(forKey: "userToken") as? String,
             let tokenSecret = userData.value(forKey: "userTokenSecret") as? String
             else{return}
@@ -84,7 +119,7 @@ class FollowersViewController: UIViewController {
                         self.followersTableView.reloadData()
                     }
                     
-                    //TODO update core data
+                    //Update core data list
                     self.saveFollowers(list)
                     
                 } else {
@@ -92,9 +127,19 @@ class FollowersViewController: UIViewController {
                     self.showError("You have no followers.")
                 }
             }
+            
+            //hide indicator
+            Indicator().hideActivityIndicator(uiView: self.view)
+            self.followersTableView.dg_stopLoading()
         }
     }
     
+    /**
+     Fetches a single user with user ID.
+     
+     - parameters:
+        - id: The user ID to be fetched.
+     */
     private func fetchUser(id: String) -> NSManagedObject? {
         let predicate = NSPredicate(format: "userId == %@", id)
         let user = CoreDataHelper().fetchRecordsWithPredicate(predicate, "Users", inManagedObjectContext: managedContext).first
@@ -102,6 +147,10 @@ class FollowersViewController: UIViewController {
         return user
     }
     
+    /**
+     Fetches the saved followers list.
+     
+     */
     private func fetchSavedFollowers() -> [Follower] {
         var result = [Follower]()
         let list = CoreDataHelper().fetchRecordsForEntity("Followers", inManagedObjectContext: managedContext)
@@ -116,6 +165,12 @@ class FollowersViewController: UIViewController {
         return result
     }
     
+    /**
+     Saves the followers list to be used offline.
+     
+     - parameters:
+        - list: The list of followers to be saved.
+     */
     private func saveFollowers(_ list: [Follower]) {
         DispatchQueue.global(qos: .background).async {
             //clear old records
@@ -141,6 +196,12 @@ class FollowersViewController: UIViewController {
         }
     }
     
+    /**
+     Shows an error message on screen.
+     
+     - parameters:
+        - msg: The message to be shown.
+     */
     private func showError(_ msg: String) {
         DispatchQueue.main.async {
             self.followersTableView.isHidden = true
@@ -149,11 +210,20 @@ class FollowersViewController: UIViewController {
         }
     }
 
+    /**
+     Hides the error message if shown.
+     
+     */
     private func hideError() {
         DispatchQueue.main.async {
             self.followersTableView.isHidden = false
             self.errorLabel.isHidden = true
         }
+    }
+    
+    //removing the refresh indicator.
+    deinit {
+        followersTableView.dg_removePullToRefresh()
     }
 }
 

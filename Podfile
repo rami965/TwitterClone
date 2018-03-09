@@ -12,5 +12,6 @@ target 'TwitterClient' do
   pod 'TwitterKit'
   pod 'OAuthSwift'
   pod 'MutableDataScanner'
+  pod 'DGElasticPullToRefresh'
 
 end

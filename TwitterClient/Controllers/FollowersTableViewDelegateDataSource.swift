@@ -26,7 +26,7 @@ extension FollowersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,6 +42,18 @@ extension FollowersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tweetsViewController = storyboard.instantiateViewController(withIdentifier: "followerDetailsVC") as! FollowerDetailsViewController
+        let cell = tableView.cellForRow(at: indexPath) as! FollowersTableCell
+        tweetsViewController.userImage = cell.personalImageView.image
+        tweetsViewController.userImageUrl = followersList[indexPath.section].profile_image_url
+        tweetsViewController.backgroundImageURL = followersList[indexPath.section].profile_background_image_url
+        tweetsViewController.username = followersList[indexPath.section].name
+        tweetsViewController.userHandler = followersList[indexPath.section].screen_name
+        tweetsViewController.numberOfFollowers = followersList[indexPath.section].followers_count
+        tweetsViewController.numberOfFriends = followersList[indexPath.section].friends_count
+        tweetsViewController.selectedUserID = followersList[indexPath.section].id_str
         
+        self.present(tweetsViewController, animated: true)
     }
 }

@@ -14,5 +14,7 @@ class Constants {
     
     static let API_BASE_URL = "https://api.twitter.com"
     static let API_VERSION = "1.1"
+    
     static let FOLLOWERS_ROUTE = "followers/list.json"
+    static let TWEETS_ROUTE = "statuses/user_timeline.json"
 }

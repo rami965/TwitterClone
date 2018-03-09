@@ -23,10 +23,22 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let _ = UserDefaults.standard.string(forKey: "currentUser") {
+            //there was logged user
+            showFollowers()
+        }
+    }
+    
+    /**
+     Adding login button and handling its action.
+     */
     private func addLoginButton() {
         let logInButton = TWTRLogInButton(logInCompletion: { sessionObject, err in
             if let error = err {
                 print("error: \(error.localizedDescription)")
+                Utils.showAlert(title: "Error", message: error.localizedDescription, vc: self)
             }else if let session = sessionObject {
                 print("Username:", session.userName)
                 print("UserID:", session.userID)
@@ -60,6 +72,12 @@ class LoginViewController: UIViewController {
         self.view.addSubview(logInButton)
     }
     
+    /**
+     Fetches a single user with user ID.
+     
+     - parameters:
+        - id: The user ID to be fetched.
+     */
     private func fetchUser(id: String) -> NSManagedObject? {
         let predicate = NSPredicate(format: "userId == %@", id)
         let user = CoreDataHelper().fetchRecordsWithPredicate(predicate, "Users", inManagedObjectContext: managedContext).first
@@ -67,6 +85,14 @@ class LoginViewController: UIViewController {
         return user
     }
     
+    /**
+     Updates credentials for a single user.
+     
+     - parameters:
+         - user: The user managed object.
+         - token: The user auth token.
+         - tokenSecret: The user auth token secret.
+     */
     private func updateUserCredintials(_ user: NSManagedObject, _ token: String, _ tokenSecret: String) {
         user.setValue(token, forKey: "userToken")
         user.setValue(tokenSecret, forKey: "userTokenSecret")
@@ -80,6 +106,15 @@ class LoginViewController: UIViewController {
         }
     }
     
+    /**
+     Add a new user data with credentials.
+     
+     - parameters:
+         - token: The user auth token.
+         - userID: The ID of the new user.
+         - username: The user name to be saved.
+         - tokenSecret: The new user auth token secret.
+     */
     private func saveNewUserCredentials(_ token: String, _ userID: String, _ username: String, _ tokenSecret: String) {
         if let user = CoreDataHelper().createRecordForEntity("Users", inManagedObjectContext: managedContext) {
             user.setValue(userID, forKey: "userId")
@@ -99,6 +134,10 @@ class LoginViewController: UIViewController {
         }
     }
     
+    /**
+     Shows the followers for the current logged in user.
+     
+     */
     private func showFollowers() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let followersViewController = storyboard.instantiateViewController(withIdentifier: "followersVC") as! FollowersViewController

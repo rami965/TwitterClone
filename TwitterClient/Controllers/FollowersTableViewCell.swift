@@ -16,8 +16,16 @@ class FollowersTableCell: UITableViewCell {
     @IBOutlet weak var handleLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
+    /**
+     Downloads the follower personal image in background.
+     
+     - parameters:
+        - imageURL: The URL string for the image.
+     */
     func downloadImage(_ imageURL: String?) {
-        if let url = imageURL {
+        //To get original image size
+        let originalImageURL = imageURL?.replacingOccurrences(of: "_normal", with: "")
+        if let url = originalImageURL {
             DispatchQueue.global(qos: .userInitiated).async {
                 Alamofire.request(url).responseData { (response) in
                     if let imageData = response.result.value,

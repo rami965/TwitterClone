@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3A46F2571E904F3631B1C61EE535EB1"
-               BuildableName = "SwiftSpinner.framework"
-               BlueprintName = "SwiftSpinner"
+               BlueprintIdentifier = "47D07B436D82BB983C8429FF84F919A3"
+               BuildableName = "DGElasticPullToRefresh.framework"
+               BlueprintName = "DGElasticPullToRefresh"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F3A46F2571E904F3631B1C61EE535EB1"
-            BuildableName = "SwiftSpinner.framework"
-            BlueprintName = "SwiftSpinner"
+            BlueprintIdentifier = "47D07B436D82BB983C8429FF84F919A3"
+            BuildableName = "DGElasticPullToRefresh.framework"
+            BlueprintName = "DGElasticPullToRefresh"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
