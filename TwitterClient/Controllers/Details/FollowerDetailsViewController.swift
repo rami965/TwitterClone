@@ -148,7 +148,7 @@ class FollowerDetailsViewController: UIViewController {
         BackendManager().fetchTweetsListFromAPI(client, url, params) { (tweets, err) in
             if let error = err {
                 print(error.localizedDescription)
-                self.showError("Not authorized.")
+                self.showError(NSLocalizedString("notAuth", comment: ""))
             } else if let list = tweets {
                 if list.count > 0 {
                     //there is tweets
@@ -159,7 +159,7 @@ class FollowerDetailsViewController: UIViewController {
                     }
                 } else {
                     //no tweets
-                    self.showError("No tweets found")
+                    self.showError(NSLocalizedString("noTweets", comment: ""))
                 }
             }
         }

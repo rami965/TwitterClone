@@ -11,3 +11,7 @@
 "friends" = "Friends";
 "tweets" = "Tweets";
 "error" = "Error";
+"logout" = "Logout";
+"noFollowers" = "You have no followers.";
+"notAuth" = "Not Authorized.";
+"noTweets" = "No tweets found.";

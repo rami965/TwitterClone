@@ -11,3 +11,7 @@
 "friends" = "الأصدقاء";
 "tweets" = "التغريدات";
 "error" = "خطأ";
+"logout" = "Logout";
+"noFollowers" = ".ليس لديك متابعين";
+"notAuth" = ".غير مصرح";
+"noTweets" = ".ليس لديك تغريدات";

@@ -98,7 +98,7 @@ class FollowersViewController: UIViewController {
                 userIDs.append(tmpID)
             }
             //add logout option
-            usernames.append("Logout")
+            usernames.append(NSLocalizedString("logout", comment: ""))
             usersDropDown.dataSource = usernames
             
             handleUsersDropDownSelection(usernames, userIDs)
@@ -200,7 +200,7 @@ class FollowersViewController: UIViewController {
                     
                 } else {
                     //no followers
-                    self.showError("You have no followers.")
+                    self.showError(NSLocalizedString("noFollowers", comment: ""))
                 }
             }
             

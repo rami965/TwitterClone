@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         let logInButton = TWTRLogInButton(logInCompletion: { sessionObject, err in
             if let error = err {
                 print("error: \(error.localizedDescription)")
-                Utils.showAlert(title: "Error", message: error.localizedDescription, vc: self)
+                Utils.showAlert(title: NSLocalizedString("error", comment: ""), message: error.localizedDescription, vc: self)
             }else if let session = sessionObject {
                 print("Username:", session.userName)
                 print("UserID:", session.userID)
